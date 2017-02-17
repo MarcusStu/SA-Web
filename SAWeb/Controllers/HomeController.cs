@@ -21,14 +21,12 @@ namespace SAWeb.Controllers
         private BitmapImage bi = null;
         private TTimeTransAndTimeSvcRec timeTrans;
         private int version;
-
         private ClientRfidList list;
         private ClientUnproductiveOrderList unproductiveOrderList;
-
-
         public bool ViewError;
         private string infoXx;
 
+        #region -- Startup Stuff --
         public string Info
         {
             get { return infoXx; }
@@ -210,6 +208,12 @@ namespace SAWeb.Controllers
             return unproductiveOrderList;
         }
 
+        public ClientTimeTransList TimeTransList
+        {
+            get { return timeTransList; }
+        }
+        #endregion
+
         // GET: Home
         public ActionResult Index()
         {
@@ -252,14 +256,10 @@ namespace SAWeb.Controllers
             Version = GetVersionFromLicenceKey();
 
             QTSysGlobal.LogicAssemblyAPI.TimeTrans.GetTerminalUserInfo(ref SvcRecGlobal.TimeTransHandlerSvcRecList, timeTransList, QTSysGlobal.ConfigRec.RowId, out ViewError);
+
             ViewBag.UserList = timeTransList;
             ViewBag.unproductiveOrderList = unproductiveOrderList;
             return View(timeTransList);
-        }
-
-        public ClientTimeTransList TimeTransList
-        {
-            get { return timeTransList; }
         }
 
         public ActionResult Information()

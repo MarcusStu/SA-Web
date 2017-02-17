@@ -57,6 +57,7 @@ textarea {
 }
 
 #user_box {
+    text-align: left;
     border: 1px solid white;
     width: 280px;
     height: 185px;

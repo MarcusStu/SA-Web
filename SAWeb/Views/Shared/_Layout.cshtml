@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - System Andersson Web</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css"/>
+    <link href="~/Content/swiper.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="startTime(), startDate(), startWeek()">
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+    </div>
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+    <script src="~/Content/js/dragend.js"></script>
+    <script src="~/Content/js/swiper.min.js"></script>
+    <script src="~/Content/js/jsfile.js"></script>
+</body>
+</html>
+
+@*@Html.ActionLink("Andersson Rapportering", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+@*@Html.ActionLink("Påstämpling", "Stamping", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+@*@Html.ActionLink("Information", "Information", "Home", new { area = "" }, new { @class = "navbar-brand" })*@

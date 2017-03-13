@@ -264,6 +264,7 @@ namespace SAWeb.Controllers
 
         public ActionResult Information()
         {
+            list
             return View();
         }
 
